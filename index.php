@@ -30,7 +30,7 @@
 			<img src="https://raw.githubusercontent.com/MujurID/mujurid.github.io/master/MujurID%201x1.png" alt="Eternity Minecraft Server logo">
 		</div>
 
-		<div class="items">
+		<!--<div class="items">
 			<!-- Replace # with your forum URL-->
 			<!--<a href="#" class="item forums">
 			<div>
@@ -56,9 +56,9 @@
 				<p class="subtitle">support us by</p>
 				<p class="title">Voting</p>
 			</div>
-			</a>-->
+			</a>
 
-		</div>
+		</div>-->
 
 		<div class="playercount">
 			<!-- Replace play.cubecraft.net with your server IP address -->
@@ -66,6 +66,21 @@
 			<!-- Please set both your IP and port -->
 			<p>Join <span class="sip" data-ip="play.cubecraft.net" data-port="25565">
 			</span> other players on <span class="ip">play.cubecraft.net</span></p>
+			<br>
+<?php
+//Get the status and decode the JSON
+$status = json_decode(file_get_contents('https://api.mcsrvstat.us/2/play.cubecraft.net'));
+
+//Show the version
+//echo $status->version;
+if (($status->players->online) > "0") {
+	
+//Show a list of players
+	foreach ($status->players->list as $player) {
+		echo $player.'<br />';
+	}
+}
+?>
 		</div>
 	</div>
 
