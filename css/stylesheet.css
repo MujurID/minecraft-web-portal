@@ -43,7 +43,7 @@ p {
 }
 
 .logo img {
-	width: 225px; /* Change image size for mobile */
+	width: 125px; /* Change image size for mobile */
 	-webkit-animation-name: logo;
 	        animation-name: logo;
 	-webkit-animation-duration: 5s;
@@ -162,7 +162,7 @@ p {
 
 @media(min-width: 400px) {
 	.logo img {
-		width: 280px; /* Change image size for mid sized devices */
+		width: 180px; /* Change image size for mid sized devices */
 	}
 
 	.playercount {
@@ -185,7 +185,7 @@ p {
 	}
 
 	.logo img {
-		width: 470px; /* Change image size for desktop */
+		width: 270px; /* Change image size for desktop */
 	}
 
 	.logo {
