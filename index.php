@@ -6,10 +6,10 @@
 <head>
 	<!-- Info meta tags, important for social media + SEO -->
 	<title>Eternity Minecraft Server Portal</title>
-	<meta name="description" content="Eternity Minecraft Server is a new and awesome Minecraft server. You can join with the IP 'play.myserver.net'.">
+	<meta name="description" content="Eternity Minecraft Server is a new and awesome Minecraft server. You can join with the IP 'mc.google.id'.">
 	<meta property="og:title" content="Eternity Minecraft Server Portal">
 	<meta property="og:site_name" content="Eternity Minecraft Server Portal">
-	<meta property="og:description" content="Eternity Minecraft Server is a new and awesome Minecraft server. You can join with the IP 'play.myserver.net'.">
+	<meta property="og:description" content="Eternity Minecraft Server is a new and awesome Minecraft server. You can join with the IP 'mc.google.id'.">
 	<meta property="og:image" content="https://raw.githubusercontent.com/MujurID/mujurid.github.io/master/MujurID%201x1.png">
 	<meta property="og:url" content="/">
 	<meta name="twitter:card" content="summary_large_image">
@@ -29,6 +29,7 @@
 			<!--<img src="img/logo.png" alt="Eternity Minecraft Server logo">-->
 			<img src="https://raw.githubusercontent.com/MujurID/mujurid.github.io/master/MujurID%201x1.png" alt="Eternity Minecraft Server logo">
 		</div>
+		<center><h1><p style="color:white">Eternity Minecraft Server Portal</p></h1>
 
 		<!--<div class="items">
 			<!-- Replace # with your forum URL-->
@@ -64,16 +65,17 @@
 			<!-- Replace play.cubecraft.net with your server IP address -->
 			<!-- Do it on both line 66 and line 67 -->
 			<!-- Please set both your IP and port -->
-			<p>Join <span class="sip" data-ip="play.cubecraft.net" data-port="25565">
-			</span> other players on <span class="ip">play.cubecraft.net</span></p>
-			<br>
+			<p>Join <span class="sip" data-ip="mc.mujur.id" data-port="25565">
+			</span> other players on <span class="ip">mc.mujur.id</span></p>
+			
 <?php
 //Get the status and decode the JSON
-$status = json_decode(file_get_contents('https://api.mcsrvstat.us/2/play.cubecraft.net'));
+$status = json_decode(file_get_contents('https://api.mcsrvstat.us/1/mc.google.id'));
+$playercount = json_decode(file_get_contents('https://api.bybilly.uk/api/players/mc.google.id/25565'));
 
 //Show the version
 //echo $status->version;
-if (($status->players->online) > "0") {
+if (($playercount->online) > "0") {
 	
 //Show a list of players
 	foreach ($status->players->list as $player) {
